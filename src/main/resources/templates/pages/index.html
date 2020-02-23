@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-CN">
+<!-- 头部和css -->
+<head th:replace="include/head::head"></head>
+
+<body class="no-skin">
+
+<!-- 顶部-菜单 -->
+<div th:include="include/navbar::navbar"></div>
+
+<div class="main-container ace-save-state" id="main-container">
+
+    <!-- 侧边栏-菜单 -->
+    <div th:replace="include/sidebar::sidebar"></div>
+
+    <div class="main-content">
+        <!-- 内容放置在下面 -->
+        <div class="main-content-inner">
+
+            <div class="page-content">
+
+                <div class="page-header">
+                    <h1>
+                        Dashboard
+                        <small>
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            欢迎页面
+                        </small>
+                    </h1>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        欢迎使用
+                    </div>
+                </div>
+
+            </div> <!--page-content-->
+        </div> <!--main-content-inner-->
+    </div>  <!--main-content-->
+</div> <!-- main-container -->
+
+
+<div class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     id="myModal">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">新增</h4>
+            </div>
+            <div class="modal-body" style="overflow: auto">
+
+                <form id="saveForm" class="form-horizontal" role="form">
+                    <input type="hidden" name="id"/>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"> bean名称 </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" name="beanName" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"> 方法名称 </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" name="methodName" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"> 方法参数 </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" name="methodParams" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"> cron表达式 </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" name="cronExpression" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"> 状态 </label>
+                        <div class="col-sm-9">
+                            <label class="form-control" style="border: none">
+                                <input type="checkbox" class="my-status ace ace-switch ace-switch-5"
+                                       name="status" value="1">
+                                <span class="lbl middle"></span>
+                            </label>
+                        </div>
+                        <!--<div class="col-sm-9">-->
+                        <!--<select class="form-control" name="status">-->
+                        <!--<option value="1">正常</option>-->
+                        <!--<option value="0">暂停</option>-->
+                        <!--</select>-->
+                        <!--</div>-->
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right"> 备注 </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" name="remark" class="form-control">
+                        </div>
+                    </div>
+
+
+                    <div class="clearfix form-actions">
+                        <div class="col-md-12 text-center">
+                            <a class="btn btn-info" onclick="save()">
+                                <i class="ace-icon fa fa-check bigger-110"></i>
+                                保&nbsp;存
+                            </a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
