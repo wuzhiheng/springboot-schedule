@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="zh-CN">
-<head th:replace="include/head::head"></head>
+<head th:include="include/head::head" th:with="title='定时作业'"></head>
 
 <body class="no-skin">
 
@@ -103,7 +103,7 @@
                             <!--列表-->
                             <div class="widget-body">
                                 <div class="widget-main no-padding">
-                                    <div class="btn-group" role="group">
+                                    <div class="btn-group-sm" role="group" id="toolbar">
                                         <button type="button" class="btn btn-primary" onclick="doAdd()"><i
                                                 class="glyphicon glyphicon-plus"></i>&nbsp;新&nbsp;增
                                         </button>

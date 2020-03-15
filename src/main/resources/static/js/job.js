@@ -1,6 +1,13 @@
 $(function () {
     //初始化表格数据
     $('#tableGrid').bootstrapTable({
+        showColumns:true,
+        showRefresh:true,
+        showToggle:true,
+        toolbar:'#toolbar',
+
+        contentType:'application/x-www-form-urlencoded',
+        method:'post',
         url: context_path + "/sysJob/list", // 获取表格数据的url
         cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
         striped: true,  //表格显示条纹，默认为false
@@ -10,6 +17,7 @@ $(function () {
         pageNumber: 1, // 首页页码
         sidePagination: 'server', // 设置为服务器端分页
         queryParams: function (params) {
+            console.log(params)
             var temp = {   //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
                 limit: params.limit,   //页面大小
                 offset: params.offset,  //页码

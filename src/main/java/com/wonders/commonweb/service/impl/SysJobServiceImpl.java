@@ -102,7 +102,7 @@ public class SysJobServiceImpl extends ServiceImpl<SysJobDao, SysJob> implements
         SysJob existJob = this.getById(id);
 
         SysJob sysJob = new SysJob()
-                .setId(id).setStatus(status);
+                .setId(id).setStatus(status).setUpdateTime(new Date());
 
         this.updateById(sysJob);
 

@@ -55,5 +55,74 @@ input[type=checkbox].my-status+.lbl::before {
     content: ""!important;
 }
 
+.widget-main.no-padding .table.table-bordered {
+    border-width: 1px;
+}
+/* bootstrap-table*/
+.fixed-table-toolbar .btn-default {
+    margin: 0!important;
+    background-color: #fff!important;
+    color: rgb(103, 106, 108)!important;
+    border: 1px solid #c2c2c2!important;
+    text-shadow: none;
+    border-radius: 3px!important;
+}
+
+.btn{
+    outline: none!important;
+}
+
+.fixed-table-toolbar .btn-default:hover {
+    background-color: #e6e6e6!important;
+}
 
 
+.fixed-table-toolbar .btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0!important;
+}
+
+.fixed-table-toolbar .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+}
+
+.fixed-table-toolbar .btn-group .btn+.btn{
+    margin-left: -1px!important;
+}
+
+.fixed-table-toolbar .btn-group>.btn-group:last-child:not(:first-child)>.btn:first-child {
+     border-bottom-left-radius: 0!important;
+     border-top-left-radius: 0!important;
+}
+
+.fixed-table-toolbar .btn-group>.btn-group .btn .caret{
+    border-top: 4px dashed rgb(103, 106, 108)!important;
+    border-right: 4px solid transparent!important;
+    border-left: 4px solid transparent!important;
+    margin: 0!important;
+}
+
+.fixed-table-toolbar .dropdown-menu {
+    border: medium none;
+    float: left;
+    font-size: 12px;
+    left: 0;
+    list-style: none outside none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)!important;
+}
+.fixed-table-toolbar .dropdown-menu>li{
+    border: 0;
+}
+.fixed-table-toolbar .dropdown-menu label{
+    font-size: inherit!important;
+    margin-bottom:0 !important;
+}
+
+.fixed-table-toolbar .open > .dropdown-toggle.btn-default {
+    background-color: #e6e6e6!important;
+}
